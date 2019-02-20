@@ -6,12 +6,16 @@
 
 ?>
 
+<body class="stretched side-header side-header-right open-header">
 
-<body>
+    <!-- Document Wrapper
+	============================================= -->
+    <div id="wrapper" class="clearfix">
 
-    <!-- Nav bar
+        <!-- Nav bar
 		============================================= -->
-    <?php include $inc_folder.'include/home_header.php'; ?>
+        <?php include $inc_folder.'include/home_header.php'; ?>
+    </div>
 
     <!-- Footer
 		============================================= -->

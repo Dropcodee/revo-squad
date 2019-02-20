@@ -1,38 +1,30 @@
 <?php
 
-require_once __DIR__ . '/vendor/autoload.php';
+/* adding all the config files which are
+=================== config.inc.php and header.inc.php */
+    require_once('include/init.php');
 
+?>
 
-$klein = new \Klein\Klein();
+<body class="stretched side-header side-header-right open-header">
 
+    <!-- Document Wrapper
+	============================================= -->
+    <div id="wrapper" class="clearfix">
 
-//Define Routes
+        <!-- Nav bar
+		============================================= -->
+        <?php include $inc_folder.'include/home_header.inc.php'; ?>
 
-//Page - Home
-$klein->respond('GET', '/', function ($request, $response, $service, $app) {
-    $service->render('views/Home.php'); //Home Page
-});
+        <!-- Hero Slider
+		============================================= -->
+        <?php include $inc_folder.'include/home_slider.inc.php'; ?>
+    </div>
 
+    <!-- Footer
+		============================================= -->
+    <?php include $inc_folder.'include/footer.inc.php'; ?>
 
-//Handle Errors
-$klein->onHttpError(function ($code, $router) {
-    switch ($code) {
-        case 404:
-            /*$router->response()->body(
-                'Page Not Found'
-            );*/
-            $router->service()->render('views/404.php');
-            break;
-        case 405:
-            $router->response()->body(
-                'You can\'t do that!'
-            );
-            break;
-        default:
-            $router->response()->body(
-                'Oh no, a bad error happened that caused a '. $code
-            );
-    }
-});
+</body>
 
-$klein->dispatch();
+</html>
