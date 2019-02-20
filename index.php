@@ -16,7 +16,7 @@
 		============================================= -->
         <?php include $inc_folder.'include/home_header.inc.php'; ?>
 
-        <!-- Hero Slider
+        <!-- full page slider includes login functions too
 		============================================= -->
         <?php include $inc_folder.'include/home_slider.inc.php'; ?>
     </div>
