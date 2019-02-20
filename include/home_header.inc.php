@@ -1,4 +1,4 @@
-<div class="co-name d-none d-lg-block center"><img src="<?=$AssetsUrl?>/images/logo-dark@2x.png" alt="Canvas Logo">
+<div class="co-name d-none d-lg-block center">
 </div>
 <!-- Header
 		============================================= -->
@@ -17,9 +17,8 @@
             <div id="logo" class="d-block d-lg-none d-xl-block">
                 <a href="/" class="standard-logo" data-dark-logo="<?=$AssetsUrl?>/images/logo.png"><img
                         src="<?=$AssetsUrl?>/images/logo.png"></a>
-                <a href="demo-photography.html" class="retina-logo"
-                    data-dark-logo="<?=$AssetsUrl?>/images/logo.png"><img src="<?=$AssetsUrl?>/images/logo.png"
-                        alt="Canvas Logo"></a>
+                <a href="/" class="retina-logo" data-dark-logo="<?=$AssetsUrl?>/images/logosm.png"><img
+                        src="<?=$AssetsUrl?>/images/logosm.png" alt="Revo squad Logo"></a>
             </div><!-- #logo end -->
 
             <!-- Primary Navigation
