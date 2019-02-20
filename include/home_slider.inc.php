@@ -28,11 +28,17 @@
                                 <input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email"
                                     class="form-control input-lg not-dark required email"
                                     placeholder="Enter your Username.." style="">
+                                <div class="input-group-append">
+                                    <i class="icon-user21" style="font-size: 24px; line-height: 40px"></i>
+                                </div>
                             </div>
                             <div class="input-group dropcode__mb">
                                 <input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email"
                                     class="form-control input-lg not-dark required email"
-                                    placeholder="Enter your Account Password.." style="">
+                                    placeholder="Enter your Password.." style="">
+                                <div class="input-group-append">
+                                    <i class="icon-lock1" style="font-size: 24px; line-height: 40px"></i>
+                                </div>
                             </div>
                             <a href="#"
                                 class="button button-border button-circle button-fill button-black button-large dropcode__btn"><span>Login</span>

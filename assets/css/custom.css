@@ -41,3 +41,6 @@
 .dark {
   color: #0a0a0a !important;
 }
+.input-group-append {
+  margin-right: 15px;
+}
