@@ -15,9 +15,9 @@
             <!-- Logo
 						============================================= -->
             <div id="logo" class="d-block d-lg-none d-xl-block">
-                <a href="/" class="standard-logo" data-dark-logo="<?=$AssetsUrl?>/images/logo.png"><img
+                <a href="<?=$rootUrl?>" class="standard-logo" data-dark-logo="<?=$AssetsUrl?>/images/logo.png"><img
                         src="<?=$AssetsUrl?>/images/logo.png"></a>
-                <a href="/" class="retina-logo" data-dark-logo="<?=$AssetsUrl?>/images/logosm.png"><img
+                <a href="<?=$rootUrl?>" class="retina-logo" data-dark-logo="<?=$AssetsUrl?>/images/logosm.png"><img
                         src="<?=$AssetsUrl?>/images/logosm.png" alt="Revo squad Logo"></a>
             </div><!-- #logo end -->
 

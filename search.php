@@ -6,15 +6,15 @@
 
 ?>
 
-<body class="stretched side-header side-header-right open-header">
+<body>
 
-    <!-- Document Wrapper
-	============================================= -->
-    <div id="wrapper" class="clearfix">
-
-        <!-- Nav bar
+    <!-- Nav bar
 		============================================= -->
-        <?php include $inc_folder.'include/home_header.php'; ?>
+    <?php include $inc_folder.'include/page_navbar.inc.php'; ?>
+
+    <!-- search bar and students card info
+		============================================= -->
+    <?php include $inc_folder.'include/revo_search.inc.php'; ?>
     </div>
 
     <!-- Footer

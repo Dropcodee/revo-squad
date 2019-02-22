@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="SemiColonWeb" />
-
+    <?php if ($_SERVER['REQUEST_URI']=="/") { ?>
     <!-- Stylesheets
 	============================================= -->
     <link href="http://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,600,700" rel="stylesheet"
@@ -31,10 +31,6 @@
 
     <link rel="stylesheet" href="<?=$AssetsCssUrl?>/colors.php?color=c85e51" type="text/css" />
     <link rel="stylesheet" href="<?=$AssetsCssUrl?>/custom.css" type="text/css" />
-
-    <!-- Document Title
-	============================================= -->
-    <title><?=$SiteTitle?></title>
     <style>
     #slider-subscribe-form .input-group {
         background-color: #FFF;
@@ -72,4 +68,36 @@
         width: 100%;
     }
     </style>
+    <?php }?>
+
+
+    <!-- CSS styles for other pages
+	============================================= -->
+
+    <? if ($_SERVER['REQUEST_URI']=="/admin.php" || $_SERVER['REQUEST_URI']=="/search.php" || $_SERVER['REQUEST_URI']=="/dashboard.php"): ?>
+
+    <link rel="stylesheet" href="<?=$AssetsCssUrl?>/style2.css" />
+    <link rel="stylesheet" href="<?=$AssetsCssUrl?>/uikit.min.css" />
+    <link rel="stylesheet" href="<?=$AssetsCssUrl?>/tabulator.min.css" />
+
+    <!-- Added main scripts for easy page redirect
+	============================================= -->
+    <script src="<?=$AssetsJsUrl?>/jquery.min.js"></script>
+    <script src="<?=$AssetsJsUrl?>/axios.min.js"></script>
+
+    <? elseif ($_SERVER['REQUEST_URI']=="/user.php"): ?>
+
+    <link rel="stylesheet" href="<?=$AssetsCssUrl?>/style2.css" />
+    <link rel="stylesheet" href="<?=$AssetsCssUrl?>/uikit.min.css" />
+    <link rel="stylesheet" href="<?=$AssetsCssUrl?>/user.css" />
+
+    <? else: ?>
+
+    <? endif; ?>
+
+
+    <!-- Document Title
+	============================================= -->
+    <title><?=$SiteTitle?></title>
+
 </head>

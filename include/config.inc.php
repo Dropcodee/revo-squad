@@ -6,7 +6,7 @@ $SiteTitle = "Revolutionary Squad | Compliant Squad";
 $SiteShortName = " Revolutionary Squad";
 
 /*  application  website url or domain url or localhost url*/
-$SiteUrl = "http://127.0.0.3:8080";
+$SiteUrl = "http://revosquad.test:8080";
 
 /*  application  root DIR */
 $rootUrl = $SiteUrl."/";
@@ -21,5 +21,9 @@ $AssetsJsUrl = $SiteUrl."/assets/js";
 
 /* applications routes */
 $ext = ".php";
-$loginUrl = $rootUrl."login".$ext;
+$searchUrl = $rootUrl."search".$ext;
+$adminUrl = $rootUrl."admin".$ext;
+$dashboardUrl = $rootUrl."dashboard".$ext;
+$userUrl = $rootUrl."user".$ext;
+$printUrl = $rootUrl."print".$ext;
 ?>

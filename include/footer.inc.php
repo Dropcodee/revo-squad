@@ -1,18 +1,23 @@
-	<!-- Go To Top
-	============================================= -->
-	<div id="gotoTop" class="icon-angle-up"></div>
+<? if ($_SERVER['REQUEST_URI']=="/"): ?>
 
-	<!-- External JavaScripts
-	============================================= -->
-	<script src="<?=$AssetsJsUrl?>/jquery.js"></script>
-	<script src="<?=$AssetsJsUrl?>/plugins.js"></script>
-	<script src="<?=$AssetsJsUrl?>/photography-addons.js"></script>
+<!-- Go To Top
+        ============================================= -->
+<div id="gotoTop" class="icon-angle-up"></div>
 
-	<!-- Footer Scripts
-	============================================= -->
-	<script src="<?=$AssetsJsUrl?>/functions.js"></script>
+<!-- scripts for home page
+        ============================================= -->
 
-	<script>
+<!-- External JavaScripts
+        ============================================= -->
+<script src="<?=$AssetsJsUrl?>/jquery.js"></script>
+<script src="<?=$AssetsJsUrl?>/plugins.js"></script>
+<script src="<?=$AssetsJsUrl?>/photography-addons.js"></script>
+
+<!-- Footer Scripts
+        ============================================= -->
+<script src="<?=$AssetsJsUrl?>/functions.js"></script>
+
+<script>
 (function() {
     var support = {
             transitions: Modernizr.csstransitions
@@ -87,4 +92,50 @@ jQuery(document).ready(function($) {
     var swiperSlider = $('.swiper-parent')[0].swiper;
     swiperSlider.enableKeyboardControl();
 });
-	</script>
+</script>
+<script src="<?=$AssetsJsUrl?>/jquery.min.js">
+</script>
+<script src="<?=$AssetsJsUrl?>/uikit.min.js">
+</script>
+<script src="<?=$AssetsJsUrl?>/uikit-icons.min.js">
+</script>
+<script src="<?=$AssetsJsUrl?>/booking.js">
+</script>
+<script>
+$(document).on("click", "#logout", e => {
+    axios.get("http://localhost:8080/revo/server/public/logout")
+        .then((result) => {
+            localStorage.clear()
+            location.href = "index.php"
+        }).catch((err) => {
+            localStorage.clear()
+            location.href = "index.php"
+        });
+})
+</script>
+
+<? elseif ($_SERVER['REQUEST_URI']=="/admin.php" || $_SERVER['REQUEST_URI']=="/search.php" || $_SERVER['REQUEST_URI']=="/dashboard.php"): ?>
+
+<script src="<?=$AssetsJsUrl?>/uikit.min.js"></script>
+<script src="<?=$AssetsJsUrl?>/uikit-icons.min.js"></script>
+
+<? elseif($_SERVER['REQUEST_URI']=="/admin.php") : ?>
+<script src="<?=$AssetsJsUrl?>/admin.js"></script>
+<? elseif($_SERVER['REQUEST_URI']=="/dashboard.php") : ?>
+<script src="<?=$AssetsJsUrl?>/tabulator.min.js">
+</script>
+<script src="<?=$AssetsJsUrl?>/users.js">
+</script>
+<script>
+$(document).on("click", "#logout", e => {
+    axios.get("http://localhost:8080/revo/server/public/logout")
+        .then((result) => {
+            localStorage.clear()
+            location.href = "index.php"
+        }).catch((err) => {
+            localStorage.clear()
+            location.href = "index.php"
+        });
+})
+</script>
+<? endif; ?>
