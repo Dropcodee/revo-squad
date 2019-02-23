@@ -92,31 +92,15 @@ jQuery(document).ready(function($) {
     var swiperSlider = $('.swiper-parent')[0].swiper;
     swiperSlider.enableKeyboardControl();
 });
-</script>
-<script src="<?=$AssetsJsUrl?>/jquery.min.js">
-</script>
-<script src="<?=$AssetsJsUrl?>/uikit.min.js">
-</script>
-<script src="<?=$AssetsJsUrl?>/uikit-icons.min.js">
-</script>
-<script src="<?=$AssetsJsUrl?>/booking.js">
-</script>
-<script>
-$(document).on("click", "#logout", e => {
-    axios.get("http://localhost:8080/revo/server/public/logout")
-        .then((result) => {
-            localStorage.clear()
-            location.href = "index.php"
-        }).catch((err) => {
-            localStorage.clear()
-            location.href = "index.php"
-        });
-})
-</script>
 
-<? elseif ($_SERVER['REQUEST_URI']=="/admin.php" || $_SERVER['REQUEST_URI']=="/search.php" || $_SERVER['REQUEST_URI']=="/dashboard.php"): ?>
+<
+?
+elseif($_SERVER['REQUEST_URI'] == "/admin.php" || $_SERVER['REQUEST_URI'] == "/search.php" || $_SERVER[
+        'REQUEST_URI'] == "/dashboard.php"): ? >
 
-<script src="<?=$AssetsJsUrl?>/uikit.min.js"></script>
+    <
+    script src = "<?=$AssetsJsUrl?>/uikit.min.js" >
+</script>
 <script src="<?=$AssetsJsUrl?>/uikit-icons.min.js"></script>
 
 <? elseif($_SERVER['REQUEST_URI']=="/admin.php") : ?>
