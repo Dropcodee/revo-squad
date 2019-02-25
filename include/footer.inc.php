@@ -92,23 +92,22 @@ jQuery(document).ready(function($) {
     var swiperSlider = $('.swiper-parent')[0].swiper;
     swiperSlider.enableKeyboardControl();
 });
-
-<
-?
-elseif($_SERVER['REQUEST_URI'] == "/admin.php" || $_SERVER['REQUEST_URI'] == "/search.php" || $_SERVER[
-        'REQUEST_URI'] == "/dashboard.php"): ? >
-
-    <
-    script src = "<?=$AssetsJsUrl?>/uikit.min.js" >
 </script>
-<script src="<?=$AssetsJsUrl?>/uikit-icons.min.js"></script>
+
+<!-- load this scripts based on the page url -->
 
 <? elseif($_SERVER['REQUEST_URI']=="/admin.php") : ?>
+
+<!-- load scripts for admin page -->
 <script src="<?=$AssetsJsUrl?>/admin.js"></script>
+<!-- load scripts for admin page -->
+
 <? elseif($_SERVER['REQUEST_URI']=="/dashboard.php") : ?>
-<script src="<?=$AssetsJsUrl?>/tabulator.min.js">
+
+<!-- load scripts for dashboard page -->
+<script src="../js/tabulator.min.js">
 </script>
-<script src="<?=$AssetsJsUrl?>/users.js">
+<script src="../js/users.js">
 </script>
 <script>
 $(document).on("click", "#logout", e => {
@@ -122,4 +121,18 @@ $(document).on("click", "#logout", e => {
         });
 })
 </script>
+<!-- load scripts for dashboard page -->
+
+<? elseif($_SERVER['REQUEST_URI']=="/student.php") : ?>
+
+<!-- load scripts for student profile page -->
+
+<script src="../js/students.js"></script>
+
+<!-- load scripts for student profile page -->
+<? elseif($_SERVER['REQUEST_URI']=="/print.php") : ?>
+<script src="../js/sdc.js"></script>
+
+<? else: ?>
+
 <? endif; ?>

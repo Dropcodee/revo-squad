@@ -24,6 +24,6 @@ $ext = ".php";
 $searchUrl = $rootUrl."search".$ext;
 $adminUrl = $rootUrl."admin".$ext;
 $dashboardUrl = $rootUrl."dashboard".$ext;
-$userUrl = $rootUrl."user".$ext;
+$userUrl = $rootUrl."student".$ext;
 $printUrl = $rootUrl."print".$ext;
 ?>

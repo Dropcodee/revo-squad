@@ -3,8 +3,6 @@
 /* adding all the config files which are
 =================== config.inc.php and header.inc.php */
     require_once('include/init.php');
-     /* add the check script after backend completion*/
-    // require_once('include/check.inc.php');
 
 ?>
 
@@ -17,7 +15,7 @@
 
     <!-- Offence category
 		============================================= -->
-    <?php include $inc_folder.'include/admin_cat.inc.php'; ?>
+    <?php include $inc_folder.'include/print_sdc.inc.php'; ?>
 
     <!-- Footer
 		============================================= -->

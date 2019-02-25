@@ -84,13 +84,23 @@
 	============================================= -->
     <script src="<?=$AssetsJsUrl?>/jquery.min.js"></script>
     <script src="<?=$AssetsJsUrl?>/axios.min.js"></script>
+    <script src="<?=$AssetsJsUrl?>/uikit.min.js">
+    </script>
+    <script src="<?=$AssetsJsUrl?>/uikit-icons.min.js"></script>
 
-    <? elseif ($_SERVER['REQUEST_URI']=="/user.php"): ?>
+    <? elseif ($_SERVER['REQUEST_URI']=="/student.php" ||$_SERVER['REQUEST_URI']=="/print.php" ): ?>
 
     <link rel="stylesheet" href="<?=$AssetsCssUrl?>/style2.css" />
     <link rel="stylesheet" href="<?=$AssetsCssUrl?>/uikit.min.css" />
     <link rel="stylesheet" href="<?=$AssetsCssUrl?>/user.css" />
 
+    <!-- Added main scripts for easy page redirect
+	============================================= -->
+    <script src="<?=$AssetsJsUrl?>/jquery.min.js"></script>
+    <script src="<?=$AssetsJsUrl?>/axios.min.js"></script>
+    <script src="<?=$AssetsJsUrl?>/uikit.min.js">
+    </script>
+    <script src="<?=$AssetsJsUrl?>/uikit-icons.min.js"></script>
     <? else: ?>
 
     <? endif; ?>

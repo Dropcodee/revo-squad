@@ -10,7 +10,9 @@
 <body>
 
 
-    <h1>Page not found ...</h1>
+    <!-- Footer
+		============================================= -->
+    <?php include $inc_folder.'include/page_404.inc.php'; ?>
 
     <!-- Footer
 		============================================= -->
